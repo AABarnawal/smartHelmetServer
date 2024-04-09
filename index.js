@@ -3,12 +3,12 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 const app = express();
 
-// app.use(cors());
-app.use(cors({
-  origin : 'https://aabarnawal.github.io/smartHelmetClient/',
-  methods : 'GET, POST,PUT, DELETE',
-  credentials : true
-}));
+app.use(cors());
+// app.use(cors({
+//   origin : 'https://aabarnawal.github.io/smartHelmetClient/',
+//   methods : 'GET, POST,PUT, DELETE',
+//   credentials : true
+// }));
 app.use(express.json())
 
 var iot = false;
@@ -16,19 +16,6 @@ app.get('/',(req, res)=>{
     res.send("hello world");
 })
 
-
-// const makeTrue =() => { 
-//   setTimeout(function () {
-//     var datetime = new Date();
-//     iot==true? iot=false : iot=true;
-//     console.log(iot);
-//     console.log(datetime.getTime());
-
-//     makeTrue();
-//   }, 10000);
-// }
-
-// makeTrue();
 
 
 
