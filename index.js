@@ -62,7 +62,7 @@ app.post('/api/post', (req,res)=>{
     insert(datetime.getDate(), Math.floor(time / 60000));
   }
 
-  console.log(req.body.start)
+  console.log(req.body)
   
 })
 
